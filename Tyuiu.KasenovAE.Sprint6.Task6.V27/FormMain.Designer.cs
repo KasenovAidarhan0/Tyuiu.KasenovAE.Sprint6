@@ -80,6 +80,7 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             // 
             // buttonDone
             // 
+            this.buttonDone.Enabled = false;
             this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
             this.buttonDone.Location = new System.Drawing.Point(99, 4);
             this.buttonDone.Name = "buttonDone";
