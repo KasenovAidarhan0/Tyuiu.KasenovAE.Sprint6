@@ -32,26 +32,26 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelButtons = new System.Windows.Forms.Panel();
+            this.buttonAbout = new System.Windows.Forms.Button();
+            this.buttonDone = new System.Windows.Forms.Button();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.panelTask = new System.Windows.Forms.Panel();
-            this.panelInput = new System.Windows.Forms.Panel();
-            this.panelOutput = new System.Windows.Forms.Panel();
             this.groupBoxTask = new System.Windows.Forms.GroupBox();
             this.textBoxTask = new System.Windows.Forms.TextBox();
-            this.buttonOpenFile = new System.Windows.Forms.Button();
-            this.buttonDone = new System.Windows.Forms.Button();
-            this.buttonAbout = new System.Windows.Forms.Button();
+            this.panelInput = new System.Windows.Forms.Panel();
             this.groupBoxInput = new System.Windows.Forms.GroupBox();
-            this.groupBoxOutput = new System.Windows.Forms.GroupBox();
             this.textBoxInput = new System.Windows.Forms.TextBox();
+            this.panelOutput = new System.Windows.Forms.Panel();
+            this.groupBoxOutput = new System.Windows.Forms.GroupBox();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.openFileDialogTask = new System.Windows.Forms.OpenFileDialog();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panelButtons.SuspendLayout();
             this.panelTask.SuspendLayout();
-            this.panelInput.SuspendLayout();
-            this.panelOutput.SuspendLayout();
             this.groupBoxTask.SuspendLayout();
+            this.panelInput.SuspendLayout();
             this.groupBoxInput.SuspendLayout();
+            this.panelOutput.SuspendLayout();
             this.groupBoxOutput.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,40 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.panelButtons.Size = new System.Drawing.Size(884, 63);
             this.panelButtons.TabIndex = 0;
             // 
+            // buttonAbout
+            // 
+            this.buttonAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAbout.Image = ((System.Drawing.Image)(resources.GetObject("buttonAbout.Image")));
+            this.buttonAbout.Location = new System.Drawing.Point(792, 4);
+            this.buttonAbout.Name = "buttonAbout";
+            this.buttonAbout.Size = new System.Drawing.Size(89, 56);
+            this.buttonAbout.TabIndex = 2;
+            this.toolTip.SetToolTip(this.buttonAbout, "О программе");
+            this.buttonAbout.UseVisualStyleBackColor = true;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            // 
+            // buttonDone
+            // 
+            this.buttonDone.Image = ((System.Drawing.Image)(resources.GetObject("buttonDone.Image")));
+            this.buttonDone.Location = new System.Drawing.Point(99, 4);
+            this.buttonDone.Name = "buttonDone";
+            this.buttonDone.Size = new System.Drawing.Size(89, 56);
+            this.buttonDone.TabIndex = 1;
+            this.toolTip.SetToolTip(this.buttonDone, "Выполнить");
+            this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
+            // 
+            // buttonOpenFile
+            // 
+            this.buttonOpenFile.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpenFile.Image")));
+            this.buttonOpenFile.Location = new System.Drawing.Point(4, 4);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(89, 56);
+            this.buttonOpenFile.TabIndex = 0;
+            this.toolTip.SetToolTip(this.buttonOpenFile, "Открыть файл");
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
+            // 
             // panelTask
             // 
             this.panelTask.Controls.Add(this.groupBoxTask);
@@ -74,24 +108,6 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.panelTask.Name = "panelTask";
             this.panelTask.Size = new System.Drawing.Size(884, 62);
             this.panelTask.TabIndex = 1;
-            // 
-            // panelInput
-            // 
-            this.panelInput.Controls.Add(this.groupBoxInput);
-            this.panelInput.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelInput.Location = new System.Drawing.Point(0, 125);
-            this.panelInput.Name = "panelInput";
-            this.panelInput.Size = new System.Drawing.Size(450, 386);
-            this.panelInput.TabIndex = 2;
-            // 
-            // panelOutput
-            // 
-            this.panelOutput.Controls.Add(this.groupBoxOutput);
-            this.panelOutput.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelOutput.Location = new System.Drawing.Point(450, 125);
-            this.panelOutput.Name = "panelOutput";
-            this.panelOutput.Size = new System.Drawing.Size(434, 386);
-            this.panelOutput.TabIndex = 3;
             // 
             // groupBoxTask
             // 
@@ -116,36 +132,14 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.textBoxTask.TabIndex = 0;
             this.textBoxTask.Text = resources.GetString("textBoxTask.Text");
             // 
-            // buttonOpenFile
+            // panelInput
             // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(4, 4);
-            this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(89, 56);
-            this.buttonOpenFile.TabIndex = 0;
-            this.buttonOpenFile.Text = "Открыть файл";
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
-            // buttonDone
-            // 
-            this.buttonDone.Location = new System.Drawing.Point(99, 4);
-            this.buttonDone.Name = "buttonDone";
-            this.buttonDone.Size = new System.Drawing.Size(89, 56);
-            this.buttonDone.TabIndex = 1;
-            this.buttonDone.Text = "Выполнить";
-            this.buttonDone.UseVisualStyleBackColor = true;
-            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
-            // 
-            // buttonAbout
-            // 
-            this.buttonAbout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAbout.Location = new System.Drawing.Point(792, 4);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(89, 56);
-            this.buttonAbout.TabIndex = 2;
-            this.buttonAbout.Text = "О программе";
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            this.panelInput.Controls.Add(this.groupBoxInput);
+            this.panelInput.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelInput.Location = new System.Drawing.Point(0, 125);
+            this.panelInput.Name = "panelInput";
+            this.panelInput.Size = new System.Drawing.Size(450, 386);
+            this.panelInput.TabIndex = 2;
             // 
             // groupBoxInput
             // 
@@ -158,6 +152,25 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.groupBoxInput.TabStop = false;
             this.groupBoxInput.Text = "Ввод:";
             // 
+            // textBoxInput
+            // 
+            this.textBoxInput.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxInput.Location = new System.Drawing.Point(3, 50);
+            this.textBoxInput.Multiline = true;
+            this.textBoxInput.Name = "textBoxInput";
+            this.textBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxInput.Size = new System.Drawing.Size(444, 333);
+            this.textBoxInput.TabIndex = 0;
+            // 
+            // panelOutput
+            // 
+            this.panelOutput.Controls.Add(this.groupBoxOutput);
+            this.panelOutput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOutput.Location = new System.Drawing.Point(450, 125);
+            this.panelOutput.Name = "panelOutput";
+            this.panelOutput.Size = new System.Drawing.Size(434, 386);
+            this.panelOutput.TabIndex = 3;
+            // 
             // groupBoxOutput
             // 
             this.groupBoxOutput.Controls.Add(this.textBoxOutput);
@@ -168,16 +181,6 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.groupBoxOutput.TabIndex = 0;
             this.groupBoxOutput.TabStop = false;
             this.groupBoxOutput.Text = "Вывод:";
-            // 
-            // textBoxInput
-            // 
-            this.textBoxInput.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxInput.Location = new System.Drawing.Point(3, 50);
-            this.textBoxInput.Multiline = true;
-            this.textBoxInput.Name = "textBoxInput";
-            this.textBoxInput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxInput.Size = new System.Drawing.Size(444, 333);
-            this.textBoxInput.TabIndex = 0;
             // 
             // textBoxOutput
             // 
@@ -208,12 +211,12 @@ namespace Tyuiu.KasenovAE.Sprint6.Task6.V27
             this.Text = "Спринт 6 | Таск 6 | Вариант 27 | Касенов А. Е.";
             this.panelButtons.ResumeLayout(false);
             this.panelTask.ResumeLayout(false);
-            this.panelInput.ResumeLayout(false);
-            this.panelOutput.ResumeLayout(false);
             this.groupBoxTask.ResumeLayout(false);
             this.groupBoxTask.PerformLayout();
+            this.panelInput.ResumeLayout(false);
             this.groupBoxInput.ResumeLayout(false);
             this.groupBoxInput.PerformLayout();
+            this.panelOutput.ResumeLayout(false);
             this.groupBoxOutput.ResumeLayout(false);
             this.groupBoxOutput.PerformLayout();
             this.ResumeLayout(false);
